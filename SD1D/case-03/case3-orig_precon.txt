@@ -1,0 +1,1197 @@
+BOUT++ version 4.1.2
+Revision: 8389878169b4e4824c2d486dad7d9d65fa0db8c5
+MD5 checksum: 8416fe98a3531d62f71ad0b5b321c5c8
+Code compiled on Oct 12 2018 at 11:36:28
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 1
+
+pid: 1895
+
+Compile-time options:
+	Checking enabled, level 2
+	Signal handling enabled
+	netCDF4 support enabled
+	Parallel NetCDF support disabled
+	OpenMP parallelisation disabled
+Reading options file case-03/BOUT.inp
+Writing options to file case-03/BOUT.settings
+
+Getting grid data from options
+	Option mesh:type = bout (default)
+	Option mesh:StaggerGrids = false  (default)
+Setting X differencing methods
+	First       : 	Option mesh:ddx:first = C2 (default)
+ Second order central (C2)
+	Second      : 	Option mesh:ddx:second = C2 (default)
+ Second order central (C2)
+	Upwind      : 	Option mesh:ddx:upwind = U1 (default)
+ First order upwinding (U1)
+	Flux        : 	Option mesh:ddx:flux = U1 (default)
+ First order upwinding (U1)
+Setting Y differencing methods
+	First       : 	Option mesh:ddy:first = C2 (default)
+ Second order central (C2)
+	Second      : 	Option mesh:ddy:second = C2 (default)
+ Second order central (C2)
+	Upwind      : 	Option mesh:ddy:upwind = U1 (default)
+ First order upwinding (U1)
+	Flux        : 	Option mesh:ddy:flux = U1 (default)
+ First order upwinding (U1)
+Setting Z differencing methods
+	First       : 	Option mesh:ddz:first = C2 (default)
+ Second order central (C2)
+	Second      : 	Option mesh:ddz:second = C2 (default)
+ Second order central (C2)
+	Upwind      : 	Option mesh:ddz:upwind = U1 (default)
+ First order upwinding (U1)
+	Flux        : 	Option mesh:ddz:flux = U1 (default)
+ First order upwinding (U1)
+	Option mesh:symmetricGlobalX = true   (default)
+	Option mesh:symmetricglobaly = true (case-03/BOUT.inp)
+Loading mesh
+	Option mesh:nx = 1 (case-03/BOUT.inp)
+	Option mesh:ny = 200 (case-03/BOUT.inp)
+	Option :mz = 1 (case-03/BOUT.inp)
+	Grid size: 1 x 200 x 1
+	Option :mxg = 0 (case-03/BOUT.inp)
+	Option :MYG = 2 (default)
+	Guard cells (x,y): 0, 2
+	Option mesh:ixseps1 = -1 (case-03/BOUT.inp)
+	Option mesh:ixseps2 = -1 (case-03/BOUT.inp)
+	WARNING: Branch-cut 'jyseps1_1' not found. Setting to -1
+	WARNING: Branch-cut 'jyseps1_2' not found. Setting to 100
+	WARNING: Branch-cut 'jyseps2_1' not found. Setting to 100
+	WARNING: Branch-cut 'jyseps2_2' not found. Setting to 199
+	WARNING: Number of inner y points 'ny_inner' not found. Setting to 100
+Finding value for NXPE (ideal = 0.070711)
+	Candidate value: 1
+	 -> Good value
+	Domain split (NXPE=1, NYPE=1) into domains (localNx=1, localNy=200)
+	Option :IncIntShear = false  (default)
+	Option :periodicX = false  (default)
+	Option :async_send = false  (default)
+	Option :ZMIN = 0 (default)
+	Option :ZMAX = 1 (default)
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+	MYPE_IN_CORE = 0
+	DXS = 0, DIN = -1. DOUT = -1
+	UXS = 0, UIN = -1. UOUT = -1
+	XIN = -1, XOUT = -1
+	Twist-shift: 
+	Option :TwistShift = false  (default)
+Boundary regions in this processor: upper_target, lower_target, 
+	done
+	Option mesh:paralleltransform = identity (default)
+	Option :append = false  (default)
+	Option :dump_format = nc (default)
+Setting up output (dump) file
+	Option output:parallel = false  (default)
+	Option output:flush = true   (default)
+	Option output:guards = true   (default)
+	Option output:floats = false  (default)
+	Option output:openclose = true   (default)
+	Option output:enabled = true   (default)
+	Option output:init_missing = false  (default)
+	Option output:shiftOutput = false  (default)
+	Option output:flushFrequency = 1 (default)
+	Using NetCDF4 format for file 'case-03/BOUT.dmp.nc'
+	Option mesh:dx = 1 (case-03/BOUT.inp)
+	Option mesh:dy = length / ny (case-03/BOUT.inp)
+	Option mesh:length = 25 (case-03/BOUT.inp)
+	Option mesh:ny = 200 (case-03/BOUT.inp)
+	Option :zmin = 0 (default)
+	Option :zmax = 1 (default)
+Variable 'g11' not in mesh options. Setting to 1.000000e+00
+Variable 'g22' not in mesh options. Setting to 1.000000e+00
+Variable 'g33' not in mesh options. Setting to 1.000000e+00
+Variable 'g12' not in mesh options. Setting to 0.000000e+00
+Variable 'g13' not in mesh options. Setting to 0.000000e+00
+Variable 'g23' not in mesh options. Setting to 0.000000e+00
+	Local maximum error in diagonal inversion is 0.000000e+00
+	Local maximum error in off-diagonal inversion is 0.000000e+00
+Variable 'J' not in mesh options. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+	Option mesh:bxy = 1 (case-03/BOUT.inp)
+	Maximum difference in Bxy is 0.000000e+00
+Calculating differential geometry terms
+	Communicating connection terms
+	Option :non_uniform = false  (default)
+Variable 'd2x' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2x' not found. Calculating from dx
+Variable 'd2y' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+Variable 'ShiftTorsion' not in mesh options. Setting to 0.000000e+00
+	WARNING: No Torsion specified for zShift. Derivatives may not be correct
+	Option restart:parallel = false  (default)
+	Option restart:flush = true   (default)
+	Option restart:guards = true   (default)
+	Option restart:floats = false  (default)
+	Option restart:openclose = true   (default)
+	Option restart:enabled = true   (default)
+	Option restart:init_missing = false  (default)
+	Option restart:shiftOutput = false  (default)
+	Option restart:flushFrequency = 1 (default)
+	Option solver:type = cvode (case-03/BOUT.inp)
+	Option solver:monitor_timestep = false  (default)
+	Option solver:mms = false  (default)
+	Option solver:mms_initialise = false  (default)
+	Option :restart = false  (default)
+	Option sd1d:cfl_info = false  (default)
+	Option sd1d:tnorm = 100 (case-03/BOUT.inp)
+	Option sd1d:nnorm = 1e+20 (case-03/BOUT.inp)
+	Option sd1d:bnorm = 1 (case-03/BOUT.inp)
+	Option sd1d:aa = 2 (case-03/BOUT.inp)
+	Option sd1d:vwall = 0 (case-03/BOUT.inp)
+	Option sd1d:frecycle = 0.9 (case-03/BOUT.inp)
+	Option sd1d:fredistribute = 0 (case-03/BOUT.inp)
+	Option sd1d:density_sheath = 0 (case-03/BOUT.inp)
+	Option sd1d:pressure_sheath = 0 (case-03/BOUT.inp)
+	Option sd1d:gaspuff = 0 (case-03/BOUT.inp)
+	Option sd1d:dneut = 10 (case-03/BOUT.inp)
+	Option sd1d:nloss = 1000 (case-03/BOUT.inp)
+	Option sd1d:eionize = 30 (case-03/BOUT.inp)
+	Option sd1d:sheath_gamma = 6 (case-03/BOUT.inp)
+	Option sd1d:neutral_gamma = 0 (case-03/BOUT.inp)
+	Option sd1d:anomalous_D = -1 (default)
+	Option sd1d:anomalous_chi = -1 (default)
+	Option sd1d:tn_floor = 3.5 (default)
+	Option sd1d:atomic = false (case-03/BOUT.inp)
+	Option sd1d:neutral_f_pn = true   (default)
+	Option sd1d:hyper = -1 (case-03/BOUT.inp)
+	Option sd1d:adpar = -1 (case-03/BOUT.inp)
+	Option sd1d:viscos = -0.01 (case-03/BOUT.inp)
+	Option sd1d:ion_viscosity = false (case-03/BOUT.inp)
+	Option sd1d:heat_conduction = true (case-03/BOUT.inp)
+	Option sd1d:charge_exchange = true   (default)
+	Option sd1d:charge_exchange_escape = false  (default)
+	Option sd1d:charge_exchange_return_fE = 1 (default)
+	Option sd1d:recombination = true   (default)
+	Option sd1d:ionisation = true   (default)
+	Option sd1d:elastic_scattering = false  (default)
+	Option sd1d:excitation = false  (default)
+	Option sd1d:gamma_sound = 1.66667 (default)
+	Option sd1d:bndry_flux_fix = false  (default)
+	Option sd1d:volume_source = true (case-03/BOUT.inp)
+	Option ne:source = (flux/(mesh:length_xpt))*h(mesh:length_xpt - mesh:ypos) (case-03/BOUT.inp)
+	Option ne:flux = 4e23 (case-03/BOUT.inp)
+	Option mesh:length_xpt = 12.5 (case-03/BOUT.inp)
+	Option mesh:ypos = y * length / (2*pi) (case-03/BOUT.inp)
+	Option mesh:length = 25 (case-03/BOUT.inp)
+	Option p:source = (powerflux*2/3 / (mesh:length_xpt))*h(mesh:length_xpt - mesh:ypos) (case-03/BOUT.inp)
+	Option p:powerflux = 2e7 (case-03/BOUT.inp)
+	Option sd1d:density_upstream = -1 (case-03/BOUT.inp)
+	Option nvn:evolve = true (case-03/BOUT.inp)
+	Option pn:evolve = true (case-03/BOUT.inp)
+Setting boundary for variable Ne
+	upper_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	lower_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	Option ne:function = 0.1 (case-03/BOUT.inp)
+	Option ne:scale = 1 (case-03/BOUT.inp)
+	Option all:evolve_bndry = false  (default)
+	Option ne:evolve_bndry = false  (default)
+Setting boundary for variable NVi
+	upper_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	lower_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	Option nvi:function = vtarg * ne:scale * ne:function * y / (2*pi) (case-03/BOUT.inp)
+	Option nvi:vtarg = 0.3 (case-03/BOUT.inp)
+	Option ne:scale = 1 (case-03/BOUT.inp)
+	Option ne:function = 0.1 (case-03/BOUT.inp)
+	Option nvi:scale = 1 (case-03/BOUT.inp)
+	Option all:evolve_bndry = false (default)
+	Option nvi:evolve_bndry = false  (default)
+Setting boundary for variable P
+	upper_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	lower_target region: 	Option all:bndry_all = neumann_o2 (case-03/BOUT.inp)
+
+	Option p:function = 0.1 (case-03/BOUT.inp)
+	Option p:scale = 1 (case-03/BOUT.inp)
+	Option all:evolve_bndry = false (default)
+	Option p:evolve_bndry = false  (default)
+	Option mesh:rxy = 1 (case-03/BOUT.inp)
+	Option mesh:bpxy = 1 (case-03/BOUT.inp)
+	Option mesh:btxy = 0 (case-03/BOUT.inp)
+	Option mesh:hthe = 1 (case-03/BOUT.inp)
+	Option mesh:sinty = 0 (case-03/BOUT.inp)
+Variable 'dpsi' not in mesh options. Setting to 0.000000e+00
+	Using dx as the x grid spacing
+Calculating differential geometry terms
+	Communicating connection terms
+	Option :non_uniform = false (default)
+Variable 'd2x' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2x' not found. Calculating from dx
+Variable 'd2y' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+	Option sd1d:area = 1 (case-03/BOUT.inp)
+	Option sd1d:fimp = -1 (case-03/BOUT.inp)
+	Option sd1d:impurity_adas = false  (default)
+	Option sd1d:diagnose = true (case-03/BOUT.inp)
+	Option sd1d:redist_weight = h(y - pi) (case-03/BOUT.inp)
+	Option sd1d:split_operator = false  (default)
+	Option :datadir = case-03
+	Option :dump_format = nc (default)
+	Option :restart_format = nc (default)
+	Using NetCDF4 format for file 'case-03/BOUT.restart.nc'
+	Option :nout = 100 (case-03/BOUT.inp)
+	Option :timestep = 5000 (case-03/BOUT.inp)
+	Option solver:NOUT = 100 (default)
+	Option solver:output_step = 5000 (default)
+Solver running for 100 outputs with output timestep of 5.000000e+03
+Initialising solver
+Initialising SUNDIALS' CVODE solver
+	Boundary region inner X
+	Boundary region outer X
+	3d fields = 3, 2d fields = 0 neq=600, local_N=600
+	Option solver:mudq = 9 (default)
+	Option solver:mldq = 9 (default)
+	Option solver:mukeep = 3 (default)
+	Option solver:mlkeep = 3 (default)
+	Option solver:atol = 1e-10 (case-03/BOUT.inp)
+	Option solver:rtol = 1e-05 (case-03/BOUT.inp)
+	Option solver:cvode_max_order = -1 (default)
+	Option solver:cvode_stability_limit_detection = false  (default)
+	Option solver:use_vector_abstol = false  (default)
+	Option solver:maxl = 5 (default)
+	Option solver:use_precon = true (case-03/BOUT.inp)
+	Option solver:use_jacobian = false  (default)
+	Option solver:max_timestep = -1 (default)
+	Option solver:start_timestep = -1 (default)
+	Option solver:diagnose = true (case-03/BOUT.inp)
+	Option solver:mxstep = 100000 (case-03/BOUT.inp)
+	Option solver:mxorder = -1 (default)
+	Option solver:adams_moulton = false  (default)
+	Using BDF method
+	Option solver:func_iter = false  (default)
+	Using Newton iteration
+	Option solver:rightprec = false  (default)
+	Using user-supplied preconditioner
+	Using difference quotient approximation for Jacobian
+Running simulation
+
+
+Run started at  : Wed Oct 31 11:03:17 2018
+
+	Option :restart = false (default)
+	Option :append = false (default)
+	Option :dump_on_restart = true   (default)
+	Option :wall_limit = -1 (default)
+	Option :stopCheck = false  (default)
+Sim Time  |  RHS evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+0.000e+00          1       6.59e-01     0.1    0.0    0.0   18.4   81.6
+|  Step 0 of 100. Elapsed 0:00:00.7 ETA 0:01:05.9	Option parderiv:type = cyclic (default)
+	Option fft:fft_measure = false  (default)
+
+CVODE: nsteps 184, nfevals 210, nniters 206, npevals 1052, nliters 848
+    -> Newton iterations per step: 1.119565e+00
+    -> Linear iterations per Newton iteration: 4.116505e+00
+    -> Preconditioner evaluations per Newton: 5.106796e+00
+    -> Last step size: 5.296256e+01, order: 4
+    -> Local error fails: 0, nonlinear convergence fails: 0
+    -> Stability limit order reductions: 0
+5.000e+03       1059       6.33e-01    43.3    0.0    0.2   19.6   36.9
+/  Step 1 of 100. Elapsed 0:00:01.3 ETA 0:01:02.7
+CVODE: nsteps 278, nfevals 356, nniters 352, npevals 1857, nliters 1507
+    -> Newton iterations per step: 1.266187e+00
+    -> Linear iterations per Newton iteration: 4.281250e+00
+    -> Preconditioner evaluations per Newton: 5.275568e+00
+    -> Last step size: 5.296256e+01, order: 4
+    -> Local error fails: 0, nonlinear convergence fails: 0
+    -> Stability limit order reductions: 0
+1.000e+04        806       4.46e-01    46.9    0.0    0.3   17.3   35.6
+-  Step 2 of 100. Elapsed 0:00:01.7 ETA 0:00:43.7
+CVODE: nsteps 378, nfevals 479, nniters 475, npevals 2554, nliters 2081
+    -> Newton iterations per step: 1.256614e+00
+    -> Linear iterations per Newton iteration: 4.381053e+00
+    -> Preconditioner evaluations per Newton: 5.376842e+00
+    -> Last step size: 7.740666e+01, order: 3
+    -> Local error fails: 0, nonlinear convergence fails: 4
+    -> Stability limit order reductions: 0
+1.500e+04        698       4.05e-01    44.7    0.0    0.2   20.6   34.5
+\  Step 3 of 100. Elapsed 0:00:02.1 ETA 0:00:39.3
+CVODE: nsteps 461, nfevals 573, nniters 569, npevals 3103, nliters 2536
+    -> Newton iterations per step: 1.234273e+00
+    -> Linear iterations per Newton iteration: 4.456942e+00
+    -> Preconditioner evaluations per Newton: 5.453427e+00
+    -> Last step size: 6.563722e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 7
+    -> Stability limit order reductions: 0
+2.000e+04        550       3.35e-01    42.6    0.0    0.2   23.2   34.0
+|  Step 4 of 100. Elapsed 0:00:02.5 ETA 0:00:32.1
+CVODE: nsteps 536, nfevals 666, nniters 662, npevals 3622, nliters 2962
+    -> Newton iterations per step: 1.235075e+00
+    -> Linear iterations per Newton iteration: 4.474320e+00
+    -> Preconditioner evaluations per Newton: 5.471299e+00
+    -> Last step size: 8.929082e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 16
+    -> Stability limit order reductions: 0
+2.500e+04        520       3.27e-01    41.1    0.0    0.2   25.5   33.2
+/  Step 5 of 100. Elapsed 0:00:02.8 ETA 0:00:31.1
+CVODE: nsteps 602, nfevals 745, nniters 741, npevals 4077, nliters 3338
+    -> Newton iterations per step: 1.230897e+00
+    -> Linear iterations per Newton iteration: 4.504723e+00
+    -> Preconditioner evaluations per Newton: 5.502024e+00
+    -> Last step size: 8.539558e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 22
+    -> Stability limit order reductions: 0
+3.000e+04        456       2.96e-01    40.0    0.0    0.2   26.7   33.2
+-  Step 6 of 100. Elapsed 0:00:03.1 ETA 0:00:27.8
+CVODE: nsteps 660, nfevals 814, nniters 810, npevals 4474, nliters 3666
+    -> Newton iterations per step: 1.227273e+00
+    -> Linear iterations per Newton iteration: 4.525926e+00
+    -> Preconditioner evaluations per Newton: 5.523457e+00
+    -> Last step size: 2.927960e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 27
+    -> Stability limit order reductions: 0
+3.500e+04        398       5.85e-01    17.6    0.0    0.1   67.3   15.0
+\  Step 7 of 100. Elapsed 0:00:03.7 ETA 0:00:54.5
+CVODE: nsteps 718, nfevals 882, nniters 878, npevals 4863, nliters 3987
+    -> Newton iterations per step: 1.222841e+00
+    -> Linear iterations per Newton iteration: 4.541002e+00
+    -> Preconditioner evaluations per Newton: 5.538724e+00
+    -> Last step size: 1.594790e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 32
+    -> Stability limit order reductions: 0
+4.000e+04        390       2.67e-01    37.9    0.0    0.2   29.3   32.6
+|  Step 8 of 100. Elapsed 0:00:04.0 ETA 0:00:24.5
+CVODE: nsteps 780, nfevals 958, nniters 954, npevals 5294, nliters 4342
+    -> Newton iterations per step: 1.223077e+00
+    -> Linear iterations per Newton iteration: 4.551363e+00
+    -> Preconditioner evaluations per Newton: 5.549266e+00
+    -> Last step size: 8.694965e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 39
+    -> Stability limit order reductions: 0
+4.500e+04        432       2.86e-01    39.2    0.0    0.2   27.5   33.0
+/  Step 9 of 100. Elapsed 0:00:04.2 ETA 0:00:26.0
+CVODE: nsteps 839, nfevals 1028, nniters 1024, npevals 5697, nliters 4675
+    -> Newton iterations per step: 1.220501e+00
+    -> Linear iterations per Newton iteration: 4.565430e+00
+    -> Preconditioner evaluations per Newton: 5.563477e+00
+    -> Last step size: 1.108253e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 44
+    -> Stability limit order reductions: 0
+5.000e+04        404       2.73e-01    38.4    0.0    0.2   28.6   32.7
+-  Step 10 of 100. Elapsed 0:00:04.5 ETA 0:00:24.5
+CVODE: nsteps 901, nfevals 1106, nniters 1102, npevals 6133, nliters 5033
+    -> Newton iterations per step: 1.223085e+00
+    -> Linear iterations per Newton iteration: 4.567151e+00
+    -> Preconditioner evaluations per Newton: 5.565336e+00
+    -> Last step size: 1.005621e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 52
+    -> Stability limit order reductions: 0
+5.500e+04        437       2.87e-01    39.5    0.0    0.2   27.4   32.9
+\  Step 11 of 100. Elapsed 0:00:04.8 ETA 0:00:25.5
+CVODE: nsteps 958, nfevals 1169, nniters 1165, npevals 6499, nliters 5336
+    -> Newton iterations per step: 1.216075e+00
+    -> Linear iterations per Newton iteration: 4.580258e+00
+    -> Preconditioner evaluations per Newton: 5.578541e+00
+    -> Last step size: 9.527735e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 55
+    -> Stability limit order reductions: 0
+6.000e+04        367       3.08e-01    30.9    0.0    0.2   42.0   27.0
+|  Step 12 of 100. Elapsed 0:00:05.1 ETA 0:00:27.1
+CVODE: nsteps 1024, nfevals 1249, nniters 1245, npevals 6949, nliters 5706
+    -> Newton iterations per step: 1.215820e+00
+    -> Linear iterations per Newton iteration: 4.583133e+00
+    -> Preconditioner evaluations per Newton: 5.581526e+00
+    -> Last step size: 9.752865e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 62
+    -> Stability limit order reductions: 0
+6.500e+04        451       3.13e-01    37.4    0.0    0.2   31.4   31.0
+/  Step 13 of 100. Elapsed 0:00:05.4 ETA 0:00:27.2
+CVODE: nsteps 1087, nfevals 1326, nniters 1322, npevals 7385, nliters 6065
+    -> Newton iterations per step: 1.216191e+00
+    -> Linear iterations per Newton iteration: 4.587746e+00
+    -> Preconditioner evaluations per Newton: 5.586233e+00
+    -> Last step size: 2.263828e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 69
+    -> Stability limit order reductions: 0
+7.000e+04        437       2.88e-01    39.2    0.0    0.2   27.7   32.8
+-  Step 14 of 100. Elapsed 0:00:05.7 ETA 0:00:24.8
+CVODE: nsteps 1145, nfevals 1392, nniters 1388, npevals 7766, nliters 6380
+    -> Newton iterations per step: 1.212227e+00
+    -> Linear iterations per Newton iteration: 4.596542e+00
+    -> Preconditioner evaluations per Newton: 5.595101e+00
+    -> Last step size: 1.367037e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 73
+    -> Stability limit order reductions: 0
+7.500e+04        382       2.77e-01    35.7    0.0    0.2   33.2   30.9
+\  Step 15 of 100. Elapsed 0:00:06.0 ETA 0:00:23.6
+CVODE: nsteps 1212, nfevals 1477, nniters 1473, npevals 8240, nliters 6769
+    -> Newton iterations per step: 1.215347e+00
+    -> Linear iterations per Newton iteration: 4.595384e+00
+    -> Preconditioner evaluations per Newton: 5.594026e+00
+    -> Last step size: 9.830986e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 82
+    -> Stability limit order reductions: 0
+8.000e+04        475       3.04e-01    40.4    0.0    0.2   26.2   33.2
+|  Step 16 of 100. Elapsed 0:00:06.3 ETA 0:00:25.5
+CVODE: nsteps 1280, nfevals 1559, nniters 1555, npevals 8704, nliters 7151
+    -> Newton iterations per step: 1.214844e+00
+    -> Linear iterations per Newton iteration: 4.598714e+00
+    -> Preconditioner evaluations per Newton: 5.597428e+00
+    -> Last step size: 9.645625e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 89
+    -> Stability limit order reductions: 0
+8.500e+04        465       3.06e-01    39.4    0.0    0.2   27.9   32.5
+/  Step 17 of 100. Elapsed 0:00:06.6 ETA 0:00:25.4
+CVODE: nsteps 1349, nfevals 1646, nniters 1642, npevals 9192, nliters 7552
+    -> Newton iterations per step: 1.217198e+00
+    -> Linear iterations per Newton iteration: 4.599269e+00
+    -> Preconditioner evaluations per Newton: 5.598051e+00
+    -> Last step size: 9.407647e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 98
+    -> Stability limit order reductions: 0
+9.000e+04        489       3.12e-01    40.5    0.0    0.2   26.2   33.1
+-  Step 18 of 100. Elapsed 0:00:06.9 ETA 0:00:25.6
+CVODE: nsteps 1414, nfevals 1729, nniters 1725, npevals 9656, nliters 7933
+    -> Newton iterations per step: 1.219943e+00
+    -> Linear iterations per Newton iteration: 4.598841e+00
+    -> Preconditioner evaluations per Newton: 5.597681e+00
+    -> Last step size: 9.185116e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 107
+    -> Stability limit order reductions: 0
+9.500e+04        465       3.02e-01    39.9    0.0    0.2   27.0   32.9
+\  Step 19 of 100. Elapsed 0:00:07.2 ETA 0:00:24.4
+CVODE: nsteps 1477, nfevals 1802, nniters 1798, npevals 10076, nliters 8280
+    -> Newton iterations per step: 1.217332e+00
+    -> Linear iterations per Newton iteration: 4.605117e+00
+    -> Preconditioner evaluations per Newton: 5.604004e+00
+    -> Last step size: 1.035082e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 112
+    -> Stability limit order reductions: 0
+1.000e+05        421       2.82e-01    38.7    0.0    0.2   28.4   32.7
+|  Step 20 of 100. Elapsed 0:00:07.5 ETA 0:00:22.5
+CVODE: nsteps 1547, nfevals 1890, nniters 1886, npevals 10570, nliters 8686
+    -> Newton iterations per step: 1.219134e+00
+    -> Linear iterations per Newton iteration: 4.605514e+00
+    -> Preconditioner evaluations per Newton: 5.604454e+00
+    -> Last step size: 9.524990e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 121
+    -> Stability limit order reductions: 0
+1.050e+05        495       3.24e-01    39.5    0.0    0.2   28.1   32.2
+/  Step 21 of 100. Elapsed 0:00:07.8 ETA 0:00:25.6
+CVODE: nsteps 1614, nfevals 1973, nniters 1969, npevals 11033, nliters 9066
+    -> Newton iterations per step: 1.219950e+00
+    -> Linear iterations per Newton iteration: 4.604368e+00
+    -> Preconditioner evaluations per Newton: 5.603352e+00
+    -> Last step size: 9.956520e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 129
+    -> Stability limit order reductions: 0
+1.100e+05        464       3.11e-01    38.5    0.0    0.2   29.4   31.8
+-  Step 22 of 100. Elapsed 0:00:08.1 ETA 0:00:24.3
+CVODE: nsteps 1679, nfevals 2052, nniters 2048, npevals 11479, nliters 9433
+    -> Newton iterations per step: 1.219774e+00
+    -> Linear iterations per Newton iteration: 4.605957e+00
+    -> Preconditioner evaluations per Newton: 5.604980e+00
+    -> Last step size: 1.024477e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 136
+    -> Stability limit order reductions: 0
+1.150e+05        447       2.94e-01    39.4    0.0    0.2   27.6   32.8
+\  Step 23 of 100. Elapsed 0:00:08.4 ETA 0:00:22.6
+CVODE: nsteps 1748, nfevals 2141, nniters 2137, npevals 11976, nliters 9841
+    -> Newton iterations per step: 1.222540e+00
+    -> Linear iterations per Newton iteration: 4.605054e+00
+    -> Preconditioner evaluations per Newton: 5.604118e+00
+    -> Last step size: 1.102132e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 146
+    -> Stability limit order reductions: 0
+1.200e+05        498       3.17e-01    40.7    0.0    0.2   25.6   33.4
+|  Step 24 of 100. Elapsed 0:00:08.7 ETA 0:00:24.1
+CVODE: nsteps 1807, nfevals 2210, nniters 2206, npevals 12371, nliters 10167
+    -> Newton iterations per step: 1.220808e+00
+    -> Linear iterations per Newton iteration: 4.608794e+00
+    -> Preconditioner evaluations per Newton: 5.607888e+00
+    -> Last step size: 9.244253e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 151
+    -> Stability limit order reductions: 0
+1.250e+05        396       2.72e-01    37.8    0.0    0.2   29.7   32.3
+/  Step 25 of 100. Elapsed 0:00:09.0 ETA 0:00:20.4
+CVODE: nsteps 1873, nfevals 2288, nniters 2284, npevals 12815, nliters 10533
+    -> Newton iterations per step: 1.219434e+00
+    -> Linear iterations per Newton iteration: 4.611646e+00
+    -> Preconditioner evaluations per Newton: 5.610771e+00
+    -> Last step size: 5.990076e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 157
+    -> Stability limit order reductions: 0
+1.300e+05        445       2.93e-01    39.4    0.0    0.2   27.6   32.8
+-  Step 26 of 100. Elapsed 0:00:09.3 ETA 0:00:21.7
+CVODE: nsteps 1936, nfevals 2363, nniters 2359, npevals 13244, nliters 10887
+    -> Newton iterations per step: 1.218492e+00
+    -> Linear iterations per Newton iteration: 4.615091e+00
+    -> Preconditioner evaluations per Newton: 5.614243e+00
+    -> Last step size: 9.133867e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 163
+    -> Stability limit order reductions: 0
+1.350e+05        430       2.87e-01    38.8    0.0    0.2   28.3   32.6
+\  Step 27 of 100. Elapsed 0:00:09.6 ETA 0:00:20.9
+CVODE: nsteps 2003, nfevals 2444, nniters 2440, npevals 13700, nliters 11262
+    -> Newton iterations per step: 1.218173e+00
+    -> Linear iterations per Newton iteration: 4.615574e+00
+    -> Preconditioner evaluations per Newton: 5.614754e+00
+    -> Last step size: 9.128989e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 170
+    -> Stability limit order reductions: 0
+1.400e+05        457       3.02e-01    39.1    0.0    0.2   28.2   32.5
+|  Step 28 of 100. Elapsed 0:00:09.9 ETA 0:00:21.8
+CVODE: nsteps 2063, nfevals 2514, nniters 2510, npevals 14101, nliters 11593
+    -> Newton iterations per step: 1.216675e+00
+    -> Linear iterations per Newton iteration: 4.618725e+00
+    -> Preconditioner evaluations per Newton: 5.617928e+00
+    -> Last step size: 8.952364e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 175
+    -> Stability limit order reductions: 0
+1.450e+05        402       2.79e-01    37.3    0.0    0.2   30.7   31.8
+/  Step 29 of 100. Elapsed 0:00:10.2 ETA 0:00:19.8
+CVODE: nsteps 2131, nfevals 2598, nniters 2594, npevals 14572, nliters 11980
+    -> Newton iterations per step: 1.217269e+00
+    -> Linear iterations per Newton iteration: 4.618350e+00
+    -> Preconditioner evaluations per Newton: 5.617579e+00
+    -> Last step size: 6.656241e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 183
+    -> Stability limit order reductions: 0
+1.500e+05        472       3.04e-01    40.2    0.0    0.2   26.5   33.1
+-  Step 30 of 100. Elapsed 0:00:10.5 ETA 0:00:21.3
+CVODE: nsteps 2193, nfevals 2670, nniters 2666, npevals 14984, nliters 12320
+    -> Newton iterations per step: 1.215686e+00
+    -> Linear iterations per Newton iteration: 4.621155e+00
+    -> Preconditioner evaluations per Newton: 5.620405e+00
+    -> Last step size: 1.134522e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 188
+    -> Stability limit order reductions: 0
+1.550e+05        413       2.79e-01    38.3    0.0    0.2   29.0   32.5
+\  Step 31 of 100. Elapsed 0:00:10.7 ETA 0:00:19.3
+CVODE: nsteps 2257, nfevals 2748, nniters 2744, npevals 15427, nliters 12685
+    -> Newton iterations per step: 1.215773e+00
+    -> Linear iterations per Newton iteration: 4.622813e+00
+    -> Preconditioner evaluations per Newton: 5.622085e+00
+    -> Last step size: 9.454869e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 195
+    -> Stability limit order reductions: 0
+1.600e+05        444       3.08e-01    37.4    0.0    0.2   31.3   31.1
+|  Step 32 of 100. Elapsed 0:00:11.1 ETA 0:00:20.9
+CVODE: nsteps 2322, nfevals 2827, nniters 2823, npevals 15872, nliters 13051
+    -> Newton iterations per step: 1.215762e+00
+    -> Linear iterations per Newton iteration: 4.623096e+00
+    -> Preconditioner evaluations per Newton: 5.622388e+00
+    -> Last step size: 1.036871e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 202
+    -> Stability limit order reductions: 0
+1.650e+05        446       2.99e-01    38.6    0.0    0.2   29.0   32.2
+/  Step 33 of 100. Elapsed 0:00:11.4 ETA 0:00:20.0
+CVODE: nsteps 2388, nfevals 2907, nniters 2903, npevals 16324, nliters 13423
+    -> Newton iterations per step: 1.215662e+00
+    -> Linear iterations per Newton iteration: 4.623837e+00
+    -> Preconditioner evaluations per Newton: 5.623148e+00
+    -> Last step size: 9.393471e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 209
+    -> Stability limit order reductions: 0
+1.700e+05        453       2.96e-01    39.6    0.0    0.2   27.3   32.9
+-  Step 34 of 100. Elapsed 0:00:11.7 ETA 0:00:19.5
+CVODE: nsteps 2450, nfevals 2979, nniters 2975, npevals 16739, nliters 13766
+    -> Newton iterations per step: 1.214286e+00
+    -> Linear iterations per Newton iteration: 4.627227e+00
+    -> Preconditioner evaluations per Newton: 5.626555e+00
+    -> Last step size: 9.059138e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 214
+    -> Stability limit order reductions: 0
+1.750e+05        416       2.88e-01    37.4    0.0    0.2   30.7   31.7
+\  Step 35 of 100. Elapsed 0:00:11.9 ETA 0:00:18.7
+CVODE: nsteps 2510, nfevals 3043, nniters 3039, npevals 17115, nliters 14078
+    -> Newton iterations per step: 1.210757e+00
+    -> Linear iterations per Newton iteration: 4.632445e+00
+    -> Preconditioner evaluations per Newton: 5.631787e+00
+    -> Last step size: 1.371348e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 216
+    -> Stability limit order reductions: 0
+1.800e+05        377       2.64e-01    37.0    0.0    0.2   30.6   32.2
+|  Step 36 of 100. Elapsed 0:00:12.2 ETA 0:00:16.9
+CVODE: nsteps 2569, nfevals 3112, nniters 3108, npevals 17511, nliters 14405
+    -> Newton iterations per step: 1.209809e+00
+    -> Linear iterations per Newton iteration: 4.634813e+00
+    -> Preconditioner evaluations per Newton: 5.634170e+00
+    -> Last step size: 5.939133e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 221
+    -> Stability limit order reductions: 0
+1.850e+05        397       2.73e-01    37.7    0.0    0.2   29.9   32.2
+/  Step 37 of 100. Elapsed 0:00:12.5 ETA 0:00:17.2
+CVODE: nsteps 2628, nfevals 3175, nniters 3171, npevals 17881, nliters 14712
+    -> Newton iterations per step: 1.206621e+00
+    -> Linear iterations per Newton iteration: 4.639546e+00
+    -> Preconditioner evaluations per Newton: 5.638915e+00
+    -> Last step size: 8.967153e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 223
+    -> Stability limit order reductions: 0
+1.900e+05        371       2.61e-01    36.8    0.0    0.2   31.0   32.1
+-  Step 38 of 100. Elapsed 0:00:12.7 ETA 0:00:16.2
+CVODE: nsteps 2688, nfevals 3239, nniters 3235, npevals 18257, nliters 15024
+    -> Newton iterations per step: 1.203497e+00
+    -> Linear iterations per Newton iteration: 4.644204e+00
+    -> Preconditioner evaluations per Newton: 5.643586e+00
+    -> Last step size: 8.773278e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 225
+    -> Stability limit order reductions: 0
+1.950e+05        377       2.65e-01    36.9    0.0    0.2   30.9   32.0
+\  Step 39 of 100. Elapsed 0:00:13.0 ETA 0:00:16.2
+CVODE: nsteps 2748, nfevals 3307, nniters 3303, npevals 18651, nliters 15350
+    -> Newton iterations per step: 1.201965e+00
+    -> Linear iterations per Newton iteration: 4.647290e+00
+    -> Preconditioner evaluations per Newton: 5.646685e+00
+    -> Last step size: 6.222406e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 229
+    -> Stability limit order reductions: 0
+2.000e+05        395       2.71e-01    37.8    0.0    0.2   29.6   32.4
+|  Step 40 of 100. Elapsed 0:00:13.3 ETA 0:00:16.3
+CVODE: nsteps 2808, nfevals 3373, nniters 3369, npevals 19035, nliters 15668
+    -> Newton iterations per step: 1.199786e+00
+    -> Linear iterations per Newton iteration: 4.650638e+00
+    -> Preconditioner evaluations per Newton: 5.650045e+00
+    -> Last step size: 9.556379e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 232
+    -> Stability limit order reductions: 0
+2.050e+05        385       2.67e-01    37.3    0.0    0.2   30.2   32.2
+/  Step 41 of 100. Elapsed 0:00:13.5 ETA 0:00:15.8
+CVODE: nsteps 2866, nfevals 3437, nniters 3433, npevals 19408, nliters 15977
+    -> Newton iterations per step: 1.197837e+00
+    -> Linear iterations per Newton iteration: 4.653947e+00
+    -> Preconditioner evaluations per Newton: 5.653364e+00
+    -> Last step size: 1.157191e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 235
+    -> Stability limit order reductions: 0
+2.100e+05        374       2.63e-01    36.8    0.0    0.2   31.0   32.0
+-  Step 42 of 100. Elapsed 0:00:13.8 ETA 0:00:15.3
+CVODE: nsteps 2926, nfevals 3505, nniters 3501, npevals 19801, nliters 16302
+    -> Newton iterations per step: 1.196514e+00
+    -> Linear iterations per Newton iteration: 4.656384e+00
+    -> Preconditioner evaluations per Newton: 5.655813e+00
+    -> Last step size: 8.823051e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 239
+    -> Stability limit order reductions: 0
+2.150e+05        394       2.87e-01    35.6    0.0    0.2   33.6   30.6
+\  Step 43 of 100. Elapsed 0:00:14.1 ETA 0:00:16.3
+CVODE: nsteps 2984, nfevals 3565, nniters 3561, npevals 20157, nliters 16598
+    -> Newton iterations per step: 1.193365e+00
+    -> Linear iterations per Newton iteration: 4.661050e+00
+    -> Preconditioner evaluations per Newton: 5.660489e+00
+    -> Last step size: 8.912812e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 240
+    -> Stability limit order reductions: 0
+2.200e+05        357       2.55e-01    36.2    0.0    0.2   31.7   32.0
+|  Step 44 of 100. Elapsed 0:00:14.3 ETA 0:00:14.3
+CVODE: nsteps 3040, nfevals 3621, nniters 3617, npevals 20493, nliters 16878
+    -> Newton iterations per step: 1.189803e+00
+    -> Linear iterations per Newton iteration: 4.666298e+00
+    -> Preconditioner evaluations per Newton: 5.665745e+00
+    -> Last step size: 8.912812e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 240
+    -> Stability limit order reductions: 0
+2.250e+05        337       2.50e-01    34.9    0.0    0.2   33.6   31.3
+/  Step 45 of 100. Elapsed 0:00:14.6 ETA 0:00:13.7
+CVODE: nsteps 3097, nfevals 3680, nniters 3676, npevals 20843, nliters 17169
+    -> Newton iterations per step: 1.186955e+00
+    -> Linear iterations per Newton iteration: 4.670566e+00
+    -> Preconditioner evaluations per Newton: 5.670022e+00
+    -> Last step size: 7.734078e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 241
+    -> Stability limit order reductions: 0
+2.300e+05        351       2.53e-01    35.9    0.0    0.2   32.1   31.8
+-  Step 46 of 100. Elapsed 0:00:14.8 ETA 0:00:13.7
+CVODE: nsteps 3153, nfevals 3742, nniters 3738, npevals 21203, nliters 17467
+    -> Newton iterations per step: 1.185538e+00
+    -> Linear iterations per Newton iteration: 4.672820e+00
+    -> Preconditioner evaluations per Newton: 5.672285e+00
+    -> Last step size: 9.795572e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 244
+    -> Stability limit order reductions: 0
+2.350e+05        361       2.57e-01    36.4    0.0    0.2   31.5   31.9
+\  Step 47 of 100. Elapsed 0:00:15.1 ETA 0:00:13.6
+CVODE: nsteps 3211, nfevals 3808, nniters 3804, npevals 21585, nliters 17783
+    -> Newton iterations per step: 1.184678e+00
+    -> Linear iterations per Newton iteration: 4.674816e+00
+    -> Preconditioner evaluations per Newton: 5.674290e+00
+    -> Last step size: 9.770774e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 248
+    -> Stability limit order reductions: 0
+2.400e+05        383       2.66e-01    37.3    0.0    0.2   30.4   32.2
+|  Step 48 of 100. Elapsed 0:00:15.4 ETA 0:00:13.9
+CVODE: nsteps 3268, nfevals 3871, nniters 3867, npevals 21952, nliters 18087
+    -> Newton iterations per step: 1.183293e+00
+    -> Linear iterations per Newton iteration: 4.677269e+00
+    -> Preconditioner evaluations per Newton: 5.676752e+00
+    -> Last step size: 1.109105e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 251
+    -> Stability limit order reductions: 0
+2.450e+05        368       2.61e-01    36.5    0.0    0.2   31.4   31.9
+/  Step 49 of 100. Elapsed 0:00:15.6 ETA 0:00:13.3
+CVODE: nsteps 3323, nfevals 3932, nniters 3928, npevals 22308, nliters 18382
+    -> Newton iterations per step: 1.182064e+00
+    -> Linear iterations per Newton iteration: 4.679735e+00
+    -> Preconditioner evaluations per Newton: 5.679226e+00
+    -> Last step size: 9.366757e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 254
+    -> Stability limit order reductions: 0
+2.500e+05        357       2.56e-01    36.1    0.0    0.2   31.9   31.8
+-  Step 50 of 100. Elapsed 0:00:15.9 ETA 0:00:12.8
+CVODE: nsteps 3382, nfevals 3999, nniters 3995, npevals 22696, nliters 18703
+    -> Newton iterations per step: 1.181254e+00
+    -> Linear iterations per Newton iteration: 4.681602e+00
+    -> Preconditioner evaluations per Newton: 5.681101e+00
+    -> Last step size: 1.007503e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 258
+    -> Stability limit order reductions: 0
+2.550e+05        389       2.72e-01    37.1    0.0    0.2   30.4   32.3
+\  Step 51 of 100. Elapsed 0:00:16.2 ETA 0:00:13.3
+CVODE: nsteps 3436, nfevals 4057, nniters 4053, npevals 23036, nliters 18985
+    -> Newton iterations per step: 1.179569e+00
+    -> Linear iterations per Newton iteration: 4.684185e+00
+    -> Preconditioner evaluations per Newton: 5.683691e+00
+    -> Last step size: 9.465303e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 260
+    -> Stability limit order reductions: 0
+2.600e+05        341       2.49e-01    35.5    0.0    0.2   32.6   31.6
+|  Step 52 of 100. Elapsed 0:00:16.4 ETA 0:00:11.9
+CVODE: nsteps 3491, nfevals 4114, nniters 4110, npevals 23374, nliters 19266
+    -> Newton iterations per step: 1.177313e+00
+    -> Linear iterations per Newton iteration: 4.687591e+00
+    -> Preconditioner evaluations per Newton: 5.687105e+00
+    -> Last step size: 9.210264e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 261
+    -> Stability limit order reductions: 0
+2.650e+05        339       2.50e-01    35.2    0.0    0.2   33.2   31.4
+/  Step 53 of 100. Elapsed 0:00:16.7 ETA 0:00:11.7
+CVODE: nsteps 3549, nfevals 4182, nniters 4178, npevals 23767, nliters 19591
+    -> Newton iterations per step: 1.177233e+00
+    -> Linear iterations per Newton iteration: 4.689086e+00
+    -> Preconditioner evaluations per Newton: 5.688607e+00
+    -> Last step size: 9.801465e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 266
+    -> Stability limit order reductions: 0
+2.700e+05        394       2.71e-01    37.7    0.0    0.2   29.9   32.3
+-  Step 54 of 100. Elapsed 0:00:16.9 ETA 0:00:12.5
+CVODE: nsteps 3606, nfevals 4243, nniters 4239, npevals 24126, nliters 19889
+    -> Newton iterations per step: 1.175541e+00
+    -> Linear iterations per Newton iteration: 4.691908e+00
+    -> Preconditioner evaluations per Newton: 5.691437e+00
+    -> Last step size: 1.696159e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 268
+    -> Stability limit order reductions: 0
+2.750e+05        360       2.57e-01    36.3    0.0    0.2   31.5   32.0
+\  Step 55 of 100. Elapsed 0:00:17.2 ETA 0:00:11.6
+CVODE: nsteps 3638, nfevals 4289, nniters 4285, npevals 24401, nliters 20118
+    -> Newton iterations per step: 1.177845e+00
+    -> Linear iterations per Newton iteration: 4.694982e+00
+    -> Preconditioner evaluations per Newton: 5.694516e+00
+    -> Last step size: 2.637653e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 275
+    -> Stability limit order reductions: 0
+2.800e+05        276       2.23e-01    32.1    0.0    0.2   37.8   30.0
+|  Step 56 of 100. Elapsed 0:00:17.4 ETA 0:00:09.8
+CVODE: nsteps 3676, nfevals 4347, nniters 4343, npevals 24749, nliters 20408
+    -> Newton iterations per step: 1.181447e+00
+    -> Linear iterations per Newton iteration: 4.699056e+00
+    -> Preconditioner evaluations per Newton: 5.698595e+00
+    -> Last step size: 2.574510e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 285
+    -> Stability limit order reductions: 0
+2.850e+05        349       2.52e-01    36.0    0.0    0.2   32.5   31.3
+/  Step 57 of 100. Elapsed 0:00:17.7 ETA 0:00:10.8
+CVODE: nsteps 3719, nfevals 4416, nniters 4412, npevals 25160, nliters 20750
+    -> Newton iterations per step: 1.186340e+00
+    -> Linear iterations per Newton iteration: 4.703083e+00
+    -> Preconditioner evaluations per Newton: 5.702629e+00
+    -> Last step size: 2.695185e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 298
+    -> Stability limit order reductions: 0
+2.900e+05        412       2.78e-01    38.5    0.0    0.2   29.3   32.1
+-  Step 58 of 100. Elapsed 0:00:17.9 ETA 0:00:11.7
+CVODE: nsteps 3766, nfevals 4491, nniters 4487, npevals 25604, nliters 21119
+    -> Newton iterations per step: 1.191450e+00
+    -> Linear iterations per Newton iteration: 4.706708e+00
+    -> Preconditioner evaluations per Newton: 5.706263e+00
+    -> Last step size: 6.277172e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 312
+    -> Stability limit order reductions: 0
+2.950e+05        445       2.93e-01    39.4    0.0    0.2   28.1   32.3
+\  Step 59 of 100. Elapsed 0:00:18.2 ETA 0:00:12.0
+CVODE: nsteps 3815, nfevals 4570, nniters 4566, npevals 26078, nliters 21514
+    -> Newton iterations per step: 1.196855e+00
+    -> Linear iterations per Newton iteration: 4.711783e+00
+    -> Preconditioner evaluations per Newton: 5.711345e+00
+    -> Last step size: 1.598937e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 327
+    -> Stability limit order reductions: 0
+3.000e+05        475       3.05e-01    40.4    0.0    0.2   26.6   32.7
+|  Step 60 of 100. Elapsed 0:00:18.5 ETA 0:00:12.2
+CVODE: nsteps 3854, nfevals 4633, nniters 4629, npevals 26456, nliters 21829
+    -> Newton iterations per step: 1.201090e+00
+    -> Linear iterations per Newton iteration: 4.715705e+00
+    -> Preconditioner evaluations per Newton: 5.715273e+00
+    -> Last step size: 6.837974e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 339
+    -> Stability limit order reductions: 0
+3.050e+05        379       2.66e-01    36.9    0.0    0.2   31.4   31.5
+/  Step 61 of 100. Elapsed 0:00:18.8 ETA 0:00:10.4
+CVODE: nsteps 3900, nfevals 4705, nniters 4701, npevals 26887, nliters 22188
+    -> Newton iterations per step: 1.205385e+00
+    -> Linear iterations per Newton iteration: 4.719847e+00
+    -> Preconditioner evaluations per Newton: 5.719421e+00
+    -> Last step size: 7.149831e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 352
+    -> Stability limit order reductions: 0
+3.100e+05        432       2.86e-01    39.2    0.0    0.2   28.3   32.4
+-  Step 62 of 100. Elapsed 0:00:19.1 ETA 0:00:10.9
+CVODE: nsteps 3948, nfevals 4783, nniters 4779, npevals 27355, nliters 22578
+    -> Newton iterations per step: 1.210486e+00
+    -> Linear iterations per Newton iteration: 4.724419e+00
+    -> Preconditioner evaluations per Newton: 5.724001e+00
+    -> Last step size: 1.610173e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 367
+    -> Stability limit order reductions: 0
+3.150e+05        469       3.02e-01    40.2    0.0    0.2   27.0   32.6
+\  Step 63 of 100. Elapsed 0:00:19.4 ETA 0:00:11.2
+CVODE: nsteps 3988, nfevals 4847, nniters 4843, npevals 27739, nliters 22898
+    -> Newton iterations per step: 1.214393e+00
+    -> Linear iterations per Newton iteration: 4.728061e+00
+    -> Preconditioner evaluations per Newton: 5.727648e+00
+    -> Last step size: 2.664488e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 379
+    -> Stability limit order reductions: 0
+3.200e+05        385       2.67e-01    37.4    0.0    0.2   30.7   31.7
+|  Step 64 of 100. Elapsed 0:00:19.7 ETA 0:00:09.6
+CVODE: nsteps 4033, nfevals 4920, nniters 4916, npevals 28177, nliters 23263
+    -> Newton iterations per step: 1.218944e+00
+    -> Linear iterations per Newton iteration: 4.732099e+00
+    -> Preconditioner evaluations per Newton: 5.731692e+00
+    -> Last step size: 1.607308e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 393
+    -> Stability limit order reductions: 0
+3.250e+05        439       2.96e-01    38.5    0.0    0.2   29.6   31.7
+/  Step 65 of 100. Elapsed 0:00:20.0 ETA 0:00:10.4
+CVODE: nsteps 4078, nfevals 4993, nniters 4989, npevals 28615, nliters 23628
+    -> Newton iterations per step: 1.223394e+00
+    -> Linear iterations per Newton iteration: 4.736019e+00
+    -> Preconditioner evaluations per Newton: 5.735618e+00
+    -> Last step size: 3.207599e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 407
+    -> Stability limit order reductions: 0
+3.300e+05        439       2.90e-01    39.3    0.0    0.2   28.1   32.4
+-  Step 66 of 100. Elapsed 0:00:20.2 ETA 0:00:09.8
+CVODE: nsteps 4117, nfevals 5056, nniters 5052, npevals 28993, nliters 23943
+    -> Newton iterations per step: 1.227107e+00
+    -> Linear iterations per Newton iteration: 4.739311e+00
+    -> Preconditioner evaluations per Newton: 5.738915e+00
+    -> Last step size: 1.778375e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 419
+    -> Stability limit order reductions: 0
+3.350e+05        379       2.64e-01    37.2    0.0    0.2   30.9   31.7
+\  Step 67 of 100. Elapsed 0:00:20.5 ETA 0:00:08.7
+CVODE: nsteps 4160, nfevals 5127, nniters 5123, npevals 29419, nliters 24298
+    -> Newton iterations per step: 1.231490e+00
+    -> Linear iterations per Newton iteration: 4.742924e+00
+    -> Preconditioner evaluations per Newton: 5.742534e+00
+    -> Last step size: 7.864733e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 433
+    -> Stability limit order reductions: 0
+3.400e+05        427       2.85e-01    38.9    0.0    0.2   28.8   32.2
+|  Step 68 of 100. Elapsed 0:00:20.8 ETA 0:00:09.1
+CVODE: nsteps 4205, nfevals 5200, nniters 5196, npevals 29857, nliters 24663
+    -> Newton iterations per step: 1.235672e+00
+    -> Linear iterations per Newton iteration: 4.746536e+00
+    -> Preconditioner evaluations per Newton: 5.746151e+00
+    -> Last step size: 1.706884e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 447
+    -> Stability limit order reductions: 0
+3.450e+05        439       2.90e-01    39.3    0.0    0.2   28.1   32.4
+/  Step 69 of 100. Elapsed 0:00:21.1 ETA 0:00:09.0
+CVODE: nsteps 4244, nfevals 5263, nniters 5259, npevals 30235, nliters 24978
+    -> Newton iterations per step: 1.239161e+00
+    -> Linear iterations per Newton iteration: 4.749572e+00
+    -> Preconditioner evaluations per Newton: 5.749192e+00
+    -> Last step size: 1.841931e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 459
+    -> Stability limit order reductions: 0
+3.500e+05        379       2.64e-01    37.2    0.0    0.2   30.9   31.7
+-  Step 70 of 100. Elapsed 0:00:21.3 ETA 0:00:07.9
+CVODE: nsteps 4287, nfevals 5334, nniters 5330, npevals 30660, nliters 25332
+    -> Newton iterations per step: 1.243294e+00
+    -> Linear iterations per Newton iteration: 4.752720e+00
+    -> Preconditioner evaluations per Newton: 5.752345e+00
+    -> Last step size: 6.710744e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 473
+    -> Stability limit order reductions: 0
+3.550e+05        426       2.86e-01    38.7    0.0    0.2   29.1   32.0
+\  Step 71 of 100. Elapsed 0:00:21.6 ETA 0:00:08.3
+CVODE: nsteps 4328, nfevals 5399, nniters 5395, npevals 31050, nliters 25657
+    -> Newton iterations per step: 1.246534e+00
+    -> Linear iterations per Newton iteration: 4.755700e+00
+    -> Preconditioner evaluations per Newton: 5.755329e+00
+    -> Last step size: 1.769113e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 485
+    -> Stability limit order reductions: 0
+3.600e+05        391       2.75e-01    36.8    0.0    0.2   31.8   31.2
+|  Step 72 of 100. Elapsed 0:00:21.9 ETA 0:00:07.7
+CVODE: nsteps 4371, nfevals 5468, nniters 5464, npevals 31463, nliters 26001
+    -> Newton iterations per step: 1.250057e+00
+    -> Linear iterations per Newton iteration: 4.758602e+00
+    -> Preconditioner evaluations per Newton: 5.758236e+00
+    -> Last step size: 1.744058e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 498
+    -> Stability limit order reductions: 0
+3.650e+05        414       2.82e-01    38.3    0.0    0.2   29.5   32.0
+/  Step 73 of 100. Elapsed 0:00:22.2 ETA 0:00:07.6
+CVODE: nsteps 4412, nfevals 5535, nniters 5531, npevals 31862, nliters 26333
+    -> Newton iterations per step: 1.253626e+00
+    -> Linear iterations per Newton iteration: 4.760984e+00
+    -> Preconditioner evaluations per Newton: 5.760622e+00
+    -> Last step size: 7.313386e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 511
+    -> Stability limit order reductions: 0
+3.700e+05        400       2.74e-01    37.9    0.0    0.2   30.1   31.8
+-  Step 74 of 100. Elapsed 0:00:22.5 ETA 0:00:07.1
+CVODE: nsteps 4453, nfevals 5602, nniters 5598, npevals 32264, nliters 26668
+    -> Newton iterations per step: 1.257130e+00
+    -> Linear iterations per Newton iteration: 4.763844e+00
+    -> Preconditioner evaluations per Newton: 5.763487e+00
+    -> Last step size: 7.842829e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 524
+    -> Stability limit order reductions: 0
+3.750e+05        403       2.75e-01    38.0    0.0    0.2   29.9   31.9
+\  Step 75 of 100. Elapsed 0:00:22.7 ETA 0:00:06.9
+CVODE: nsteps 4496, nfevals 5673, nniters 5669, npevals 32690, nliters 27023
+    -> Newton iterations per step: 1.260899e+00
+    -> Linear iterations per Newton iteration: 4.766802e+00
+    -> Preconditioner evaluations per Newton: 5.766449e+00
+    -> Last step size: 1.937196e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 538
+    -> Stability limit order reductions: 0
+3.800e+05        427       2.96e-01    37.5    0.0    0.2   31.3   31.0
+|  Step 76 of 100. Elapsed 0:00:23.0 ETA 0:00:07.1
+CVODE: nsteps 4540, nfevals 5745, nniters 5741, npevals 33120, nliters 27381
+    -> Newton iterations per step: 1.264537e+00
+    -> Linear iterations per Newton iteration: 4.769378e+00
+    -> Preconditioner evaluations per Newton: 5.769030e+00
+    -> Last step size: 1.974078e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 552
+    -> Stability limit order reductions: 0
+3.850e+05        431       2.86e-01    39.0    0.0    0.2   28.5   32.3
+/  Step 77 of 100. Elapsed 0:00:23.3 ETA 0:00:06.6
+CVODE: nsteps 4582, nfevals 5815, nniters 5811, npevals 33540, nliters 27731
+    -> Newton iterations per step: 1.268223e+00
+    -> Linear iterations per Newton iteration: 4.772156e+00
+    -> Preconditioner evaluations per Newton: 5.771812e+00
+    -> Last step size: 2.072007e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 566
+    -> Stability limit order reductions: 0
+3.900e+05        421       2.83e-01    38.6    0.0    0.2   29.1   32.0
+-  Step 78 of 100. Elapsed 0:00:23.6 ETA 0:00:06.2
+CVODE: nsteps 4622, nfevals 5881, nniters 5877, npevals 33936, nliters 28061
+    -> Newton iterations per step: 1.271527e+00
+    -> Linear iterations per Newton iteration: 4.774715e+00
+    -> Preconditioner evaluations per Newton: 5.774375e+00
+    -> Last step size: 6.710159e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 579
+    -> Stability limit order reductions: 0
+3.950e+05        397       2.74e-01    37.6    0.0    0.2   30.5   31.7
+\  Step 79 of 100. Elapsed 0:00:23.9 ETA 0:00:05.7
+CVODE: nsteps 4667, nfevals 5944, nniters 5940, npevals 34311, nliters 28373
+    -> Newton iterations per step: 1.272766e+00
+    -> Linear iterations per Newton iteration: 4.776599e+00
+    -> Preconditioner evaluations per Newton: 5.776263e+00
+    -> Last step size: 1.432497e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 588
+    -> Stability limit order reductions: 0
+4.000e+05        376       2.62e-01    37.2    0.0    0.2   30.8   31.8
+|  Step 80 of 100. Elapsed 0:00:24.1 ETA 0:00:05.2
+CVODE: nsteps 4714, nfevals 6015, nniters 6011, npevals 34733, nliters 28724
+    -> Newton iterations per step: 1.275138e+00
+    -> Linear iterations per Newton iteration: 4.778573e+00
+    -> Preconditioner evaluations per Newton: 5.778240e+00
+    -> Last step size: 6.816231e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 600
+    -> Stability limit order reductions: 0
+4.050e+05        423       2.84e-01    38.6    0.0    0.2   29.1   32.0
+/  Step 81 of 100. Elapsed 0:00:24.4 ETA 0:00:05.4
+CVODE: nsteps 4754, nfevals 6081, nniters 6077, npevals 35129, nliters 29054
+    -> Newton iterations per step: 1.278292e+00
+    -> Linear iterations per Newton iteration: 4.780977e+00
+    -> Preconditioner evaluations per Newton: 5.780648e+00
+    -> Last step size: 8.215333e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 613
+    -> Stability limit order reductions: 0
+4.100e+05        397       2.72e-01    37.9    0.0    0.2   30.0   31.9
+-  Step 82 of 100. Elapsed 0:00:24.7 ETA 0:00:04.9
+CVODE: nsteps 4799, nfevals 6150, nniters 6146, npevals 35540, nliters 29396
+    -> Newton iterations per step: 1.280683e+00
+    -> Linear iterations per Newton iteration: 4.782948e+00
+    -> Preconditioner evaluations per Newton: 5.782623e+00
+    -> Last step size: 1.813796e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 625
+    -> Stability limit order reductions: 0
+4.150e+05        412       2.79e-01    38.4    0.0    0.2   29.4   32.0
+\  Step 83 of 100. Elapsed 0:00:25.0 ETA 0:00:04.7
+CVODE: nsteps 4841, nfevals 6220, nniters 6216, npevals 35959, nliters 29745
+    -> Newton iterations per step: 1.284032e+00
+    -> Linear iterations per Newton iteration: 4.785232e+00
+    -> Preconditioner evaluations per Newton: 5.784910e+00
+    -> Last step size: 7.018702e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 639
+    -> Stability limit order reductions: 0
+4.200e+05        420       2.82e-01    38.6    0.0    0.2   29.0   32.2
+|  Step 84 of 100. Elapsed 0:00:25.3 ETA 0:00:04.5
+CVODE: nsteps 4884, nfevals 6287, nniters 6283, npevals 36360, nliters 30079
+    -> Newton iterations per step: 1.286446e+00
+    -> Linear iterations per Newton iteration: 4.787363e+00
+    -> Preconditioner evaluations per Newton: 5.787044e+00
+    -> Last step size: 1.492286e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 651
+    -> Stability limit order reductions: 0
+4.250e+05        402       2.75e-01    38.0    0.0    0.2   29.9   31.9
+/  Step 85 of 100. Elapsed 0:00:25.5 ETA 0:00:04.1
+CVODE: nsteps 4925, nfevals 6354, nniters 6350, npevals 36761, nliters 30413
+    -> Newton iterations per step: 1.289340e+00
+    -> Linear iterations per Newton iteration: 4.789449e+00
+    -> Preconditioner evaluations per Newton: 5.789134e+00
+    -> Last step size: 8.444426e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 664
+    -> Stability limit order reductions: 0
+4.300e+05        402       2.75e-01    38.0    0.0    0.2   30.0   31.9
+-  Step 86 of 100. Elapsed 0:00:25.8 ETA 0:00:03.8
+CVODE: nsteps 4971, nfevals 6428, nniters 6424, npevals 37199, nliters 30777
+    -> Newton iterations per step: 1.292295e+00
+    -> Linear iterations per Newton iteration: 4.790940e+00
+    -> Preconditioner evaluations per Newton: 5.790629e+00
+    -> Last step size: 1.872808e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 678
+    -> Stability limit order reductions: 0
+4.350e+05        439       3.00e-01    38.0    0.0    0.2   30.6   31.2
+\  Step 87 of 100. Elapsed 0:00:26.1 ETA 0:00:03.9
+CVODE: nsteps 5008, nfevals 6485, nniters 6481, npevals 37541, nliters 31062
+    -> Newton iterations per step: 1.294129e+00
+    -> Linear iterations per Newton iteration: 4.792779e+00
+    -> Preconditioner evaluations per Newton: 5.792470e+00
+    -> Last step size: 1.432929e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 688
+    -> Stability limit order reductions: 0
+4.400e+05        343       2.51e-01    35.5    0.0    0.2   33.1   31.1
+|  Step 88 of 100. Elapsed 0:00:26.4 ETA 0:00:03.0
+CVODE: nsteps 5055, nfevals 6558, nniters 6554, npevals 37970, nliters 31418
+    -> Newton iterations per step: 1.296538e+00
+    -> Linear iterations per Newton iteration: 4.793714e+00
+    -> Preconditioner evaluations per Newton: 5.793409e+00
+    -> Last step size: 1.906348e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 701
+    -> Stability limit order reductions: 0
+4.450e+05        430       2.87e-01    38.9    0.0    0.2   28.8   32.1
+/  Step 89 of 100. Elapsed 0:00:26.6 ETA 0:00:03.2
+CVODE: nsteps 5097, nfevals 6628, nniters 6624, npevals 38390, nliters 31768
+    -> Newton iterations per step: 1.299588e+00
+    -> Linear iterations per Newton iteration: 4.795894e+00
+    -> Preconditioner evaluations per Newton: 5.795592e+00
+    -> Last step size: 2.025703e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 715
+    -> Stability limit order reductions: 0
+4.500e+05        421       2.82e-01    38.7    0.0    0.2   29.0   32.1
+-  Step 90 of 100. Elapsed 0:00:26.9 ETA 0:00:02.8
+CVODE: nsteps 5141, nfevals 6694, nniters 6690, npevals 38779, nliters 32091
+    -> Newton iterations per step: 1.301303e+00
+    -> Linear iterations per Newton iteration: 4.796861e+00
+    -> Preconditioner evaluations per Newton: 5.796562e+00
+    -> Last step size: 3.268212e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 726
+    -> Stability limit order reductions: 0
+4.550e+05        390       2.71e-01    37.3    0.0    0.2   30.9   31.6
+\  Step 91 of 100. Elapsed 0:00:27.2 ETA 0:00:02.4
+CVODE: nsteps 5179, nfevals 6754, nniters 6750, npevals 39139, nliters 32391
+    -> Newton iterations per step: 1.303340e+00
+    -> Linear iterations per Newton iteration: 4.798667e+00
+    -> Preconditioner evaluations per Newton: 5.798370e+00
+    -> Last step size: 1.488578e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 737
+    -> Stability limit order reductions: 0
+4.600e+05        361       2.58e-01    36.3    0.0    0.2   32.2   31.3
+|  Step 92 of 100. Elapsed 0:00:27.5 ETA 0:00:02.1
+CVODE: nsteps 5228, nfevals 6833, nniters 6829, npevals 39608, nliters 32781
+    -> Newton iterations per step: 1.306236e+00
+    -> Linear iterations per Newton iteration: 4.800264e+00
+    -> Preconditioner evaluations per Newton: 5.799971e+00
+    -> Last step size: 1.960279e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 752
+    -> Stability limit order reductions: 0
+4.650e+05        470       3.04e-01    40.1    0.0    0.2   27.2   32.5
+/  Step 93 of 100. Elapsed 0:00:27.8 ETA 0:00:02.1
+CVODE: nsteps 5265, nfevals 6897, nniters 6893, npevals 39970, nliters 33079
+    -> Newton iterations per step: 1.309212e+00
+    -> Linear iterations per Newton iteration: 4.798926e+00
+    -> Preconditioner evaluations per Newton: 5.798636e+00
+    -> Last step size: 2.488585e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 765
+    -> Stability limit order reductions: 0
+4.700e+05        363       2.57e-01    36.7    0.0    0.2   31.5   31.5
+-  Step 94 of 100. Elapsed 0:00:28.0 ETA 0:00:01.5
+CVODE: nsteps 5331, nfevals 7007, nniters 7003, npevals 40563, nliters 33562
+    -> Newton iterations per step: 1.313637e+00
+    -> Linear iterations per Newton iteration: 4.792517e+00
+    -> Preconditioner evaluations per Newton: 5.792232e+00
+    -> Last step size: 1.876460e+02, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 787
+    -> Stability limit order reductions: 0
+4.750e+05        594       3.56e-01    43.3    0.0    0.2   23.0   33.5
+\  Step 95 of 100. Elapsed 0:00:28.4 ETA 0:00:01.8
+CVODE: nsteps 5375, nfevals 7081, nniters 7077, npevals 41007, nliters 33932
+    -> Newton iterations per step: 1.316651e+00
+    -> Linear iterations per Newton iteration: 4.794687e+00
+    -> Preconditioner evaluations per Newton: 5.794404e+00
+    -> Last step size: 7.476829e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 802
+    -> Stability limit order reductions: 0
+4.800e+05        445       2.94e-01    39.3    0.0    0.2   28.3   32.2
+|  Step 96 of 100. Elapsed 0:00:28.7 ETA 0:00:01.2
+CVODE: nsteps 5409, nfevals 7135, nniters 7131, npevals 41330, nliters 34201
+    -> Newton iterations per step: 1.318358e+00
+    -> Linear iterations per Newton iteration: 4.796102e+00
+    -> Preconditioner evaluations per Newton: 5.795821e+00
+    -> Last step size: 9.333732e+01, order: 1
+    -> Local error fails: 0, nonlinear convergence fails: 812
+    -> Stability limit order reductions: 0
+4.850e+05        324       2.44e-01    34.5    0.0    0.2   34.3   31.0
+/  Step 97 of 100. Elapsed 0:00:28.9 ETA 0:00:00.7
+CVODE: nsteps 5458, nfevals 7220, nniters 7216, npevals 41790, nliters 34576
+    -> Newton iterations per step: 1.322096e+00
+    -> Linear iterations per Newton iteration: 4.791574e+00
+    -> Preconditioner evaluations per Newton: 5.791297e+00
+    -> Last step size: 2.771481e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 828
+    -> Stability limit order reductions: 0
+4.900e+05        461       3.01e-01    39.7    0.0    0.2   27.7   32.3
+-  Step 98 of 100. Elapsed 0:00:29.2 ETA 0:00:00.6
+CVODE: nsteps 5514, nfevals 7288, nniters 7284, npevals 42174, nliters 34892
+    -> Newton iterations per step: 1.321001e+00
+    -> Linear iterations per Newton iteration: 4.790225e+00
+    -> Preconditioner evaluations per Newton: 5.789951e+00
+    -> Last step size: 6.970742e+01, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 834
+    -> Stability limit order reductions: 0
+4.950e+05        385       2.68e-01    37.2    0.0    0.2   30.6   32.0
+\  Step 99 of 100. Elapsed 0:00:29.5 ETA 0:00:00.3
+CVODE: nsteps 5574, nfevals 7362, nniters 7358, npevals 42590, nliters 35234
+    -> Newton iterations per step: 1.320057e+00
+    -> Linear iterations per Newton iteration: 4.788529e+00
+    -> Preconditioner evaluations per Newton: 5.788258e+00
+    -> Last step size: 1.141311e+02, order: 2
+    -> Local error fails: 0, nonlinear convergence fails: 841
+    -> Stability limit order reductions: 0
+5.000e+05        417       2.82e-01    38.3    0.0    0.2   29.1   32.4
+|  Step 100 of 100. Elapsed 0:00:29.8 ETA 0:00:00.0
+Run finished at  : Wed Oct 31 11:03:46 2018
+
+Run time : 29 s
+	Option :datadir = case-03
+	Option :settingsfile = BOUT.settings
+Writing options to file case-03/BOUT.settings
